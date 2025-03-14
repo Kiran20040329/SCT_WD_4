@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="stats-container">
+            <div class="details">
+                <h1>Todo List</h1>
+                <p>PUT IN 100% EFFORTS</p>
+                <div id="progressbar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="stats-numbers">
+                <p id="numbers">0/0</p>
+            </div>
+        </div>
+
+        <div class="titles">
+            <label for="taskInput" class="p1">Enter a Task:</label>
+            <label for="dateInput" class="p2">Due-Date&Time:</label>
+        </div>
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Write your task" aria-label="Task input">
+            <input type="datetime-local" id="dateInput" aria-label="Due date">
+            <button id="newTask" type="submit">+</button>
+        </form>
+
+        <ul class="task-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
