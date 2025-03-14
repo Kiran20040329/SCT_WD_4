@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+ --background:#121644;
+ --secondaryBackground:#171c48;
+ --text:#fff;
+ --purple: orangered;
+ --teal:#24feee;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--text);  
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    max-width: 500px;
+
+    margin: 120px auto 0 auto;
+}
+.stats-container{
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--purple);
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 30px;
+
+}
+.details{
+    width: 100%;
+}
+
+#progressbar{
+    width: 100%;
+    height: 10px;
+    background: var(--secondaryBackground);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#progress{
+    width: 80%;
+    height: 10px;
+    background: var(--teal);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+#numbers{
+    width: 100px;
+    height: 100px;
+    background: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 50px;
+    font-weight: bold;
+}
+.titles{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    padding-left: 0;
+    padding-right: 60px;
+}
+.titles p{
+    margin-right: 80px;
+    margin-bottom: 0;
+}
+.p1{
+    justify-content: center;
+    padding-left: 10px;
+}
+.p2{
+    justify-content: center;
+    padding-left: 135px;
+}
+form{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+input{
+    flex: 1;
+    padding: 16px;
+    background: var(--secondaryBackground);
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    outline: none;
+    color: var(--text);
+}
+button{
+    padding: 16px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    background-color: var(--purple);
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    color:var(--text);
+    outline: none;
+    cursor: pointer;
+
+}
+.task-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+    list-style: none;
+}
+.taskItem{
+    width: 100%;
+    display: flex;
+    background-color: var(--secondaryBackground);
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.task{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.task.completed{
+    text-decoration: line-through;
+    color:var(--teal);
+}
+.taskItem img{
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* General styles for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 80px;
+        max-width: 90%;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #numbers {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+    }
+
+    .titles {
+        flex-direction: column;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .titles label {
+        margin-bottom: 10px;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button {
+        width: auto;
+        border-radius: 10px;
+    }
+
+    .task-list {
+        gap: 15px;
+    }
+
+    .taskItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .icons {
+        align-self: flex-end;
+    }
+}
+
+/* Styles for very small screens (e.g., mobile phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    #numbers {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    input, button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .task p {
+        font-size: 14px;
+    }
+
+    .icons img {
+        width: 20px;
+        height: 20px;
+    }
+}
