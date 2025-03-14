@@ -21,7 +21,7 @@ A simple and interactive To-Do List web application that allows users to add, ed
 ## 📥 Installation & Usage
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/todo-web-app.git
+   git clone https://github.com/Kiran20040329/SCT_WD_4/tree/main
    ```
 2. **Navigate to the project directory:**
    ```sh
